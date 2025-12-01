@@ -1,0 +1,860 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    /* Use SF Pro Display as the primary UI font with common fallbacks */
+    font-family: 'SF Pro Display', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+}
+
+/* SF Pro Display font-face declarations (local files in the Font/ folder) */
+@font-face {
+    font-family: 'SF Pro Display';
+    src: url('Font/SFPRODISPLAYREGULAR.OTF') format('opentype');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'SF Pro Display';
+    src: url('Font/SFPRODISPLAYMEDIUM.OTF') format('opentype');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'SF Pro Display';
+    src: url('Font/SFPRODISPLAYBOLD.OTF') format('opentype');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+    /* background-color: #444444; */
+}
+
+#main {
+    position: relative;
+    overflow: hidden;
+}
+
+/* HEADDER ------------------------------------------------------------------------ */
+
+#headder {
+    height: 100vh;
+    width: 100%;
+    /* background-color: #73bcf8; */
+}
+
+/* NAV 1 -------------------------- */
+
+#nav1 {
+    height: 5vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 39px;
+    background-color: white;
+    padding: 9px 0px;
+    align-items: center;
+    position: relative;
+    top: 0%;
+    z-index: 1;
+
+}
+
+#nav1 h3 {
+    font-weight: 100;
+    color: #5A5A5A;
+    font-size: 15px;
+}
+
+#nav1 i {
+    font-size: 20px;
+}
+
+/* NAV 2 -------------------------- */
+
+#nav2 {
+    display: flex;
+    justify-content: space-between;
+    background-color: white;
+    padding: 1.6vh 17.7vw;
+    align-items: center;
+    position: relative;
+    z-index: 99;
+}
+
+.nav2-l h3 {
+    font-size: 24px;
+    font-weight: 500;
+}
+
+.nav2-r {
+    display: flex;
+    gap: 25px;
+    align-items: center;
+}
+
+.nav2-r h3 {
+    font-weight: 100;
+    color: #5A5A5A;
+    font-size: 15px;
+}
+
+.nav2-r-b1 {
+    padding: 5px 15px;
+    background-color: transparent;
+    border-radius: 27px;
+    border-style: solid;
+    border-width: 1px;
+    color: #5A5A5A;
+}
+
+.nav2-r-b2 {
+    padding: 5px 15px;
+    background-color: #0076DF;
+    border-radius: 25px;
+    border-style: solid;
+    border-width: 1px;
+    color: white;
+    border: none;
+}
+
+/* VIDEO 1 -------------------------- */
+
+#video1 {
+    /* background-color: pink; */
+    height: 97.9%;
+    display: flex;
+    justify-content: center;
+    position: relative;      /* creates the containing block for absolute children */
+}
+
+.video1-c {
+    height: 100%;
+    /* background-color: rgb(149, 149, 199); */
+    position: relative;
+    top: -85px;
+    overflow: hidden;
+    z-index: 0;
+}
+
+.h-video1 {
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+
+}
+
+/* TEXT ------------ */
+
+#text-c{
+    position: absolute;
+    top: 65%;                /* % is relative to #video1's height now */
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 10;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+}
+
+#vision-pro{
+    display: flex;
+    align-items: center;
+    text-align: center;
+}
+#vision-pro i{
+    font-size: 6vh;
+}
+#vision-pro h2{
+    font-weight: 500;
+    font-size: 7vh;
+}
+
+#li-c{
+    text-align: center;
+    color: #FF5A00;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+#li-c h2{
+    font-weight: 500;
+    font-size: 3vh;
+}
+
+/* PAGE 2 ------------------------------------------------------------------------ */
+
+#page2{
+    height: 100vh;
+    width: 100%;
+    background-color: rgb(156, 156, 207);
+    overflow: hidden;
+}
+
+.p2-video1{
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+}
+
+.p2-h2-c{
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    color: white;
+    bottom: -50%;
+    font-size: 3.5vh;
+    text-align: center;
+    width: 60vw;
+}
+.p2-h2-c h2{
+    margin-top: 6.5vh;
+}
+
+/* PAGE 3 ------------------------------------------------------------------------ */
+
+#page3{
+    height: 100vh;
+    width: 100%;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.p3-img1{
+    width: 20vw;
+  
+}
+.p3-img2{
+    width: 65vw;
+}
+
+/* PAGE 4 ------------------------------------------------------------------------ */
+
+
+#page4{
+    height: 100vh;
+    width: 100%;
+    background-color: rgb(156, 156, 207);
+    overflow: hidden;
+    /* Needed so scaling happens from the top center when we animate */
+    transform-origin: center top;
+}
+
+.p4-video1{
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+}
+
+.p4-h2-c{
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    color: white;
+    bottom: 32%;
+    font-size: 3.5vh;
+    text-align: center;
+    width: 60vw;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    align-items: center;
+}
+
+.p4-h2-c h2{
+    width: 45;
+    text-align: center;
+    font-size: 5vw;
+}
+.p4-h2-c h3{
+    width: 45;
+    text-align: center;
+    font-size: 1.5vw;
+}
+
+/* PAGE 5 ------------------------------------------------------------------------ */
+
+#page5{
+    /* background-color: rgb(248, 222, 222); */
+    height: 58vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    /* align-items: center; */
+}
+
+.content-container{
+    /* background-color: rgb(175, 175, 247); */
+    width: 65vw;
+    height: 60%;
+    display: flex;
+    /* margin-top: vh; */
+    justify-content: space-between;
+}
+
+.h1-container{
+    /* background-color: pink; */
+}
+.h1-container h1{
+    width: 20vw;
+    font-size: 4vh;
+}
+
+.p-container{
+    /* background-color: rgb(156, 224, 156); */
+    display: flex;
+    flex-direction: column;
+    gap: 70px;
+}
+.p-container p{
+    width: 37vw;
+    font-size: 2.5vh;
+    font-weight: 600;
+    color: #86868B;
+}
+.p-btn button{
+    font-size: 2.5vh;
+}
+
+/* PAGE 6 ------------------------------------------------------------------------ */
+
+
+#page6{
+    height: 100vh;
+    width: 100%;
+    background-color: rgb(156, 156, 207);
+    overflow: hidden;
+    /* Needed so scaling happens from the top center when we animate */
+    transform-origin: center top;
+}
+
+.p6-video1{
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+}
+
+.p6-h2-c{
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    color: white;
+    bottom: 32%;
+    font-size: 3.5vh;
+    text-align: center;
+    width: 45vw;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    align-items: center;
+}
+
+.p6-h2-c h2{
+    width: 45;
+    text-align: center;
+    font-size: 5vw;
+}
+.p6-h2-c h3{
+    width: 45;
+    text-align: center;
+    font-size: 1.5vw;
+}
+
+/* PAGE 7 ------------------------------------------------------------------------ */
+
+#page7{
+    /* background-color: rgb(248, 222, 222); */
+    height: 58vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    /* align-items: center; */
+}
+
+.content-container{
+    /* background-color: rgb(175, 175, 247); */
+    width: 65vw;
+    height: 60%;
+    display: flex;
+    /* margin-top: vh; */
+    justify-content: space-between;
+}
+
+.h1-container{
+    /* background-color: pink; */
+}
+.h1-container h1{
+    width: 20vw;
+    font-size: 4vh;
+}
+
+.p-container{
+    /* background-color: rgb(156, 224, 156); */
+    display: flex;
+    flex-direction: column;
+    gap: 70px;
+}
+.p-container p{
+    width: 37vw;
+    font-size: 2.5vh;
+    font-weight: 600;
+    color: #86868B;
+}
+.p-btn button{
+    font-size: 2.5vh;
+}
+
+/* PAGE 8 ------------------------------------------------------------------------ */
+
+
+#page8{
+    height: 100vh;
+    width: 100%;
+    background-color: rgb(156, 156, 207);
+    overflow: hidden;
+    /* Needed so scaling happens from the top center when we animate */
+    transform-origin: center top;
+}
+
+.p8-video1{
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+}
+
+.p8-h2-c{
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    color: white;
+    bottom: 32%;
+    font-size: 3.5vh;
+    text-align: center;
+    width: 45vw;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    align-items: center;
+}
+
+.p8-h2-c h2{
+    width: 45;
+    text-align: center;
+    font-size: 5vw;
+}
+.p8-h2-c h3{
+    width: 45;
+    text-align: center;
+    font-size: 1.5vw;
+}
+
+/* PAGE 9 ------------------------------------------------------------------------ */
+
+#page9{
+    /* background-color: rgb(248, 222, 222); */
+    height: 58vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    /* align-items: center; */
+}
+
+.content-container{
+    /* background-color: rgb(175, 175, 247); */
+    width: 65vw;
+    height: 60%;
+    display: flex;
+    /* margin-top: vh; */
+    justify-content: space-between;
+}
+
+.h1-container{
+    /* background-color: pink; */
+}
+.h1-container h1{
+    width: 20vw;
+    font-size: 4vh;
+}
+
+.p-container{
+    /* background-color: rgb(156, 224, 156); */
+    display: flex;
+    flex-direction: column;
+    gap: 70px;
+}
+.p-container p{
+    width: 37vw;
+    font-size: 2.5vh;
+    font-weight: 600;
+    color: #86868B;
+}
+.p-btn button{
+    font-size: 2.5vh;
+}
+
+/* PAGE 10 ------------------------------------------------------------------------ */
+
+
+#page10{
+    height: 100vh;
+    width: 100%;
+    background-color: rgb(156, 156, 207);
+    overflow: hidden;
+    /* Needed so scaling happens from the top center when we animate */
+    transform-origin: center top;
+}
+
+.p10-video1{
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+}
+
+.p10-h2-c{
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    color: white;
+    bottom: 32%;
+    font-size: 3.5vh;
+    text-align: center;
+    width: 45vw;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    align-items: center;
+}
+
+.p10-h2-c h2{
+    width: 45;
+    text-align: center;
+    font-size: 5vw;
+}
+.p10-h2-c h3{
+    width: 45;
+    text-align: center;
+    font-size: 1.5vw;
+}
+
+/* PAGE 11 ------------------------------------------------------------------------ */
+
+#page11{
+    /* background-color: rgb(248, 222, 222); */
+    height: 58vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    /* align-items: center; */
+}
+
+.content-container{
+    /* background-color: rgb(175, 175, 247); */
+    width: 65vw;
+    height: 60%;
+    display: flex;
+    /* margin-top: vh; */
+    justify-content: space-between;
+}
+
+.h1-container{
+    /* background-color: pink; */
+}
+.h1-container h1{
+    width: 20vw;
+    font-size: 4vh;
+}
+
+.p-container{
+    /* background-color: rgb(156, 224, 156); */
+    display: flex;
+    flex-direction: column;
+    gap: 70px;
+}
+.p-container p{
+    width: 37vw;
+    font-size: 2.5vh;
+    font-weight: 600;
+    color: #86868B;
+}
+.p-btn button{
+    font-size: 2.5vh;
+}
+
+/* PAGE 12 ------------------------------------------------------------------------ */
+
+
+#page12{
+    height: 100vh;
+    width: 100%;
+    background-color: rgb(156, 156, 207);
+    overflow: hidden;
+    /* Needed so scaling happens from the top center when we animate */
+    transform-origin: center top;
+}
+
+.p12-video1{
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+}
+
+.p12-h2-c{
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    color: white;
+    bottom: 32%;
+    font-size: 3.5vh;
+    text-align: center;
+    width: 60vw;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    align-items: center;
+}
+
+.p12-h2-c h2{
+    width: 45;
+    text-align: center;
+    font-size: 5vw;
+}
+.p12-h2-c h3{
+    width: 45;
+    text-align: center;
+    font-size: 1.5vw;
+}
+
+/* PAGE 13 ------------------------------------------------------------------------ */
+
+#page13{
+    /* background-color: rgb(248, 222, 222); */
+    height: 58vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    /* align-items: center; */
+}
+
+.content-container{
+    /* background-color: rgb(175, 175, 247); */
+    width: 65vw;
+    height: 60%;
+    display: flex;
+    /* margin-top: vh; */
+    justify-content: space-between;
+}
+
+.h1-container{
+    /* background-color: pink; */
+}
+.h1-container h1{
+    width: 20vw;
+    font-size: 4vh;
+}
+
+.p-container{
+    /* background-color: rgb(156, 224, 156); */
+    display: flex;
+    flex-direction: column;
+    gap: 70px;
+}
+.p-container p{
+    width: 37vw;
+    font-size: 2.5vh;
+    font-weight: 600;
+    color: #86868B;
+}
+.p-btn button{
+    font-size: 2.5vh;
+}
+
+/* PAGE 14 ------------------------------------------------------------------------ */
+
+
+#page14{
+    height: 100vh;
+    width: 100%;
+    background-color: rgb(156, 156, 207);
+    overflow: hidden;
+    /* Needed so scaling happens from the top center when we animate */
+    transform-origin: center top;
+}
+
+.p14-video1{
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+}
+
+.p14-h2-c{
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    color: white;
+    bottom: 32%;
+    font-size: 3.5vh;
+    text-align: center;
+    width: 60vw;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    align-items: center;
+}
+
+.p14-h2-c h2{
+    width: 45;
+    text-align: center;
+    font-size: 5vw;
+}
+.p14-h2-c h3{
+    width: 45;
+    text-align: center;
+    font-size: 1.5vw;
+}
+
+/* PAGE 15 ------------------------------------------------------------------------ */
+
+#page15{
+    /* background-color: rgb(248, 222, 222); */
+    height: 58vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    /* align-items: center; */
+}
+
+.content-container{
+    /* background-color: rgb(175, 175, 247); */
+    width: 65vw;
+    height: 60%;
+    display: flex;
+    /* margin-top: vh; */
+    justify-content: space-between;
+}
+
+.h1-container{
+    /* background-color: pink; */
+}
+.h1-container h1{
+    width: 20vw;
+    font-size: 4vh;
+}
+
+.p-container{
+    /* background-color: rgb(156, 224, 156); */
+    display: flex;
+    flex-direction: column;
+    gap: 70px;
+}
+.p-container p{
+    width: 37vw;
+    font-size: 2.5vh;
+    font-weight: 600;
+    color: #86868B;
+}
+.p-btn button{
+    font-size: 2.5vh;
+}
+
+/* PAGE 16 ------------------------------------------------------------------------------------*/
+
+#page16{
+    background-color: #F5F5F7;
+    height: 60vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+#p16-container{
+    width: 50vw;
+    height: max-content;
+    /* background-color: rgb(156, 156, 223); */
+    text-align: center;
+    margin-top: 3vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#p16-container h1{
+    margin-top: 2vh;
+    font-size: 9.5vh;
+}
+#p16-container p{
+    margin-top: 5vh;
+    font-size: 3vh;
+    font-weight: 600;
+    color: #86868B;
+    line-height: 1.5;
+    /* width: 40vw; */
+    text-align: center;
+}
+#p16-container h3{
+    font-size: 3vh;
+}
+
+/* PAGE 17 ------------------------------------------------------------------------------------*/
+
+#page17{
+    height: 100vh;
+    width: 100%;
+    background-color: #F5F5F7;
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+    align-items: center;
+}
+#page17 video{
+    width: auto;
+    height: 50vw;
+}
+
+/* PAGE 18 ------------------------------------------------------------------------------------*/
+
+#page18{
+    background-color: black;
+    height: 100vh;
+    width: 100vw;
+    color: white;
+    display: flex;
+    justify-content: center;
+}
+#p18-container{
+    height: min-content;
+    width: min-content;
+    text-align: center;
+    margin-top: 21vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+#p18-container h4{
+    font-size: 3vh;
+}
+#p18-container h1{
+    font-size: 9vh;
+    width: 90vh;
+    margin-top: 2vh;
+}
+#p18-container p{
+    font-size: 3vh;
+    font-weight: 600;
+    margin-top: 7vh;
+    width: 50.3vw;
+    line-height: 1.2;
+    color: #86868B;
+}

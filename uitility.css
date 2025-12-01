@@ -1,0 +1,17 @@
+/* BUTTON WHITE BG ---------------------------------------------------------*/
+
+.button-white{
+    background-color:transparent;
+    border: solid;
+    border-radius: 100vh;
+    border-width: 1px;
+    padding: 17px 30px;
+    font-size: 3.2vh;
+   transition: ease-out 0.1s;
+    
+}
+.button-white:hover{
+    background-color: black;
+    color: white;
+    scale: 1.05;
+}
