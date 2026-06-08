@@ -4,13 +4,11 @@ A modern Apple Vision Pro landing page clone built with HTML, CSS, and JavaScrip
 
 ## Screenshots
 
-### SS1
 
-![Apple Vision Pro Website Screenshot 1](public/SS/ss1.png)
 
-### SS2
+![Apple Vision Pro Website Screenshot 1](public/SS/ss1.png) ![Apple Vision Pro Website Screenshot 2](public/SS/ss2.png)
 
-![Apple Vision Pro Website Screenshot 2](public/SS/ss2.png)
+
 
 ## Tech Stack
 
